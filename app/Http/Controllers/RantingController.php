@@ -26,7 +26,7 @@ class RantingController extends Controller
             'page_name' => "Manajemen Rantings"
         ];
         $rantings = Ranting::all();
-        return view('role.pages.rantings.index', compact('rantings', 'data'));
+        return view('role.superadmin.pages.rantings.index', compact('rantings', 'data'));
     }
 
     public function store(Request $request)

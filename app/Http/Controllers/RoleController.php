@@ -26,7 +26,7 @@ class RoleController extends Controller
             'page_name' => "Manajemen Roles"
         ];
         $roles = Role::all();
-        return view('role.pages.roles.index', compact('roles', 'data'));
+        return view('role.superadmin.pages.roles.index', compact('roles', 'data'));
     }
 
     public function store(Request $request)

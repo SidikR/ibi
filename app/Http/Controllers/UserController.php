@@ -20,7 +20,7 @@ class UserController extends Controller
         $users = User::with(['role', 'ranting'])->get();
         $roles = Role::all();
         $rantings = Ranting::all();
-        return view('role.pages.users.index', compact('users', 'data', 'roles', 'rantings'));
+        return view('role.superadmin.pages.users.index', compact('users', 'data', 'roles', 'rantings'));
     }
 
     public function store(Request $request)
