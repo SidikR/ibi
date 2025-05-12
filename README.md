@@ -1,66 +1,134 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌐 WEB Manajemen Keanggotaan IBI
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sebuah aplikasi **open source** berbasis web untuk mempermudah manajemen keanggotaan IBI (Ikatan Bidan Indonesia). Proyek ini masih dalam tahap awal pengembangan (`v0.1.0`) dan terbuka untuk kontribusi dari siapa saja.
 
-## About Laravel
+Dibangun menggunakan:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* ⚙️ Laravel 10
+* 🗃️ MySQL
+* 🎨 Tailwind & Laravel Vite (untuk frontend)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🚀 Fitur Utama
 
-## Learning Laravel
+✅ **CRUD Role**
+✅ **CRUD User**
+✅ **Export Data User**
+✅ **Manajemen Data Ranting**
+✅ **Manajemen Data Personal Anggota**
+✅ **Kependudukan**
+✅ **Riwayat Pendidikan**
+✅ **Pelatihan**
+✅ **Perizinan**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Fitur-fitur ini akan terus dikembangkan untuk mendukung kebutuhan IBI secara menyeluruh.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 📦 Instalasi
 
-## Laravel Sponsors
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek ini secara lokal:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### 1. Fork dan Like Repository Ini ❤️
 
-### Premium Partners
+Klik tombol `Fork` di kanan atas dan jangan lupa kasih ⭐️ untuk mendukung proyek ini.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### 2. Clone Repository
 
-## Contributing
+```bash
+git clone https://github.com/USERNAME/WEB-Manajemen-Keanggotaan-IBI.git
+cd WEB-Manajemen-Keanggotaan-IBI
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Install Dependensi Backend & Frontend
 
-## Code of Conduct
+```bash
+composer install
+npm install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4. Konfigurasi Environment
 
-## Security Vulnerabilities
+Copy file `.env.example` lalu ubah sesuai kebutuhan:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+cp .env.example .env
+```
 
-## License
+Generate app key Laravel:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+php artisan key:generate
+```
+
+### 5. Migrasi dan Seeder Database
+
+Lakukan migrasi ulang dan isi database awal:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+🧪 Akun default bisa disesuaikan di file: `database/seeders/DatabaseSeeder.php`.
+
+### 6. Build Asset Frontend
+
+Untuk menjalankan Vite secara lokal:
+
+```bash
+npm run dev
+```
+
+### 7. Jalankan Aplikasi
+
+```bash
+php artisan serve
+```
+
+Akses aplikasi di: [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 🤝 Kontribusi
+
+Proyek ini terbuka untuk kontribusi dari siapa saja!
+Kamu bisa bantu dengan:
+
+* Menambahkan fitur baru
+* Memperbaiki bug
+* Menulis dokumentasi
+* Melakukan refactor atau optimasi
+
+Silakan buat **Pull Request** atau buka **Issue**.
+Setiap kontribusi sangat berarti 💪
+
+---
+
+## 🛠️ Catatan Pengembangan
+
+Versi saat ini: **v0.1.0**
+
+Roadmap ke depan:
+
+* 🔐 Autentikasi berbasis OAuth/SSO
+* 📊 Dashboard statistik
+* 📤 Modul pelaporan dan notifikasi
+* 📥 Import data dari Excel
+* 🔌 REST API untuk integrasi dengan sistem lain
+
+---
+
+## 🪪 Lisensi
+
+Kode dalam proyek ini dilisensikan di bawah **MIT License**.
+Silakan digunakan, dimodifikasi, dan disebarkan dengan bebas.
+
+---
+
+## 📫 Kontak
+
+Untuk pertanyaan, saran, atau kolaborasi, silakan hubungi melalui **GitHub Issues**.
+
+Terima kasih sudah mendukung proyek ini!
+✨ Jangan lupa kasih ⭐️ kalau kamu merasa ini bermanfaat!
