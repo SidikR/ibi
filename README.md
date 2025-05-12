@@ -6,7 +6,8 @@ Dibangun menggunakan:
 
 * ⚙️ Laravel 10
 * 🗃️ MySQL
-* 🎨 Tailwind & Laravel Vite (untuk frontend)
+* 🎨 Tailwind & Laravel Vite (untuk frontend login)
+* 🎨 Bootstrap 5 (untuk frontend lainnya)
 
 ---
 
@@ -37,7 +38,7 @@ Klik tombol `Fork` di kanan atas dan jangan lupa kasih ⭐️ untuk mendukung pr
 ### 2. Clone Repository
 
 ```bash
-git clone https://github.com/USERNAME/WEB-Manajemen-Keanggotaan-IBI.git
+git clone https://github.com/SidikR/ibi.git
 cd WEB-Manajemen-Keanggotaan-IBI
 ```
 
