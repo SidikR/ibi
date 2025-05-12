@@ -1,0 +1,158 @@
+/* public/css/style.css */
+
+body {
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.navbar .logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .logo-title img {
+    height: 40px;
+}
+
+.navbar {
+    background-color: #d63384;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown a {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #d63384;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px 60px;
+    background: linear-gradient(to right, #ffe6f0, #ffffff);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #555;
+}
+
+.cta {
+    margin-top: 30px;
+}
+
+.cta a {
+    background-color: #d63384;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    color: #666;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.logo-marquee {
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-track {
+    display: flex;
+    min-width: fit-content;
+    animation: scroll 25s linear infinite;
+    white-space: nowrap;
+}
+
+.logo-marquee:hover .logo-track {
+    animation-play-state: paused;
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    background-color: #000;
+    color: white;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+}
+#scrollTopBtn:hover {
+    background-color: #444;
+}
